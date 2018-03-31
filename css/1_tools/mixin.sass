@@ -1,0 +1,198 @@
+%link
+	display: inline-block
+	overflow: hidden
+	position: relative		
+	margin-top: 20px
+	height: 35px
+	cursor: pointer
+	&:hover
+		span
+			animation: linkAnimation 0.3s forwards ease-in-out
+		&:before
+			transform: rotate(90deg)
+			color: black
+		&:after
+			transform: translateY(20px)
+	span
+		color: #eb4c49
+		font-size: 25px
+		line-height: 30px
+		font-weight: 900
+		display: inline-block
+		float: left
+		width: auto
+		cursor: pointer
+		margin-left: 0px
+		animation: linkAnimationBack 0.5s forwards ease-in-out
+		&:nth-child(1)
+			margin-left: 20px
+			animation-delay: 0.01s
+		&:nth-child(2)
+			animation-delay: 0.02s
+		&:nth-child(3)
+			animation-delay: 0.03s
+		&:nth-child(4)
+			animation-delay: 0.04s
+		&:nth-child(5)
+			animation-delay: 0.05s
+		&:nth-child(6)
+			animation-delay: 0.06s
+		&:nth-child(7)
+			animation-delay: 0.07s
+		&:nth-child(8)
+			animation-delay: 0.08s
+		&:nth-child(9)
+			animation-delay: 0.09s
+		&:nth-child(10)
+			animation-delay: 0.1s
+		&:nth-child(11)
+			animation-delay: 0.11s
+		&:nth-child(12)
+			animation-delay: 0.12s
+		&:nth-child(13)
+			animation-delay: 0.13s
+	&:before
+		position: absolute
+		content: '+'
+		font-weight: 900
+		font-size: 30px
+		color: #eb4c49
+		left: 0px
+		transition: 0.5s cubic-bezier(.7,0,.3,1)
+		transform-origin: center center
+	&:after
+		position: absolute
+		content: ''
+		display: inline-block
+		width: 100%
+		height: 1em
+		top: 15px
+		left: 20px
+		border-bottom: 3px solid #eb4c49
+		transition: 0.5s cubic-bezier(.7,0,.3,1)
+@keyframes linkAnimation
+	0%
+		transform: translateY(0px)
+		color: #eb4c49
+		opacity: 1
+	45%
+		transform: translateY(-25px)
+		color: #eb4c49
+		opacity: 1
+	50%
+		transform: translateY(-25px)
+		color: #eb4c49
+		opacity: 0
+	55%
+		transform: translateY(25px)
+		color: black
+		opacity: 0
+	100%
+		transform: translateY(0px)
+		color: black
+		opacity: 1
+@keyframes linkAnimationBack
+	0%
+		transform: translateY(0px)
+		color: black
+		opacity: 1
+	45%
+		transform: translateY(25px)
+		color: black
+		opacity: 1
+	50%
+		transform: translateY(25px)
+		color: black
+		opacity: 0
+	55%
+		transform: translateY(-25px)
+		color: #eb4c49
+		opacity: 0
+	100%
+		transform: translateY(0px)
+		color: #eb4c49
+		opacity: 1
+@keyframes linkAnimationBlack
+	0%
+		transform: translateY(0px)
+		color: black
+		opacity: 1
+	45%
+		transform: translateY(-25px)
+		color: black
+		opacity: 1
+	50%
+		transform: translateY(-25px)
+		color: black
+		opacity: 0
+	55%
+		transform: translateY(25px)
+		color: black
+		opacity: 0
+	100%
+		transform: translateY(0px)
+		color: black
+		opacity: 1
+@keyframes linkAnimationBackBlack
+	0%
+		transform: translateY(0px)
+		color: black
+		opacity: 1
+	45%
+		transform: translateY(25px)
+		color: black
+		opacity: 1
+	50%
+		transform: translateY(25px)
+		color: black
+		opacity: 0
+	55%
+		transform: translateY(-25px)
+		color: black
+		opacity: 0
+	100%
+		transform: translateY(0px)
+		color: black
+		opacity: 1
+@keyframes linkAnimationWhite
+	0%
+		transform: translateY(0px)
+		color: #eb4c49
+		opacity: 1
+	45%
+		transform: translateY(-25px)
+		color: #eb4c49
+		opacity: 1
+	50%
+		transform: translateY(-25px)
+		color: #eb4c49
+		opacity: 0
+	55%
+		transform: translateY(25px)
+		color: white
+		opacity: 0
+	100%
+		transform: translateY(0px)
+		color: white
+		opacity: 1
+@keyframes linkAnimationBackWhite
+	0%
+		transform: translateY(0px)
+		color: white
+		opacity: 1
+	45%
+		transform: translateY(25px)
+		color: white
+		opacity: 1
+	50%
+		transform: translateY(25px)
+		color: white
+		opacity: 0
+	55%
+		transform: translateY(-25px)
+		color: #eb4c49
+		opacity: 0
+	100%
+		transform: translateY(0px)
+		color: #eb4c49
+		opacity: 1

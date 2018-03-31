@@ -208,7 +208,6 @@ document.addEventListener("DOMContentLoaded",function(){
 		descriptionImageParalax();
 		serviceHeadingParalax();
 		carouselItemsParalax();
-		console.log(window.pageYOffset);
 	}
 	///////////////////////////////////////////////////////////////////
 	//add event listener to scroll event
