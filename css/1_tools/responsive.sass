@@ -1,0 +1,564 @@
+@media only screen and (max-width: 576px)
+	//header and popup
+	.menu__item
+		font-size: 38px
+		line-height: 49px
+	.popup__wrapper
+		padding-top: 170px
+		padding-left: 0px
+	.menu__wrap
+		left: 20px!important
+	.menu
+		li
+			&:nth-child(2)
+				.menu__wrap
+					top: 235px
+			&:nth-child(3)
+				.menu__wrap
+					top: 290px
+			&:nth-child(4)
+				.menu__wrap
+					top: 345px
+			&:nth-child(5)
+				.menu__wrap
+					top: 400px
+	.popup__right
+		float: none
+		margin-left: 20px!important
+		margin-top: 330px
+	.navigation__popup
+		overflow-y: scroll
+		overflow-x: hidden
+		height: 100vh !important
+		&.active
+			.popup__side
+				animation-name: popup__sideAnimationIn576!important
+		&.passive
+			.popup__side
+				animation-name: popup__sideAnimationOut576!important
+	body
+		&.active
+			.navigation__popup
+				position: initial
+	.blackScene
+		height: 100vh
+		.background
+			width: 80%
+	.popup__side
+		transform: rotate(0deg)!important
+		top: 150px
+		left: 20px
+	@keyframes popup__sideAnimationIn576
+		0%
+			transform: translateX(-100%)
+			opacity: 0
+		100%
+			transform: translateX(0%)
+			opacity: 1
+	@keyframes popup__sideAnimationOut576
+		0%
+			transform: translateX(0%)
+			opacity: 1
+		100%
+			transform: translateX(-100%)
+			opacity: 0
+	//banner
+	.banner__left
+		width: 60%
+		h1
+			font-size: 38px
+			line-height: 1
+		h5
+			transform: rotate(0deg) !important
+			top: 200px
+			left: 30px
+	.banner
+		padding-top: 235px
+		padding-left: 30px
+	.banner__right
+		float: none
+		margin-right: 0px
+		a
+			height: 20px
+			&:before
+				font-size: 18px
+				left: 5px
+			&:after
+				top: 1px
+				border-bottom: 2px solid #eb4c49
+			span	
+				font-size: 18px
+				line-height: 18px
+	//decor
+	.decor__wrap
+		top: 595px
+		left: 30px
+	//slide
+	.slide__item
+		height: 250px!important
+		img
+			top: -220px
+			width: 65%
+	.slide__button
+		top: 250px
+		width: 120px
+		right: 0px
+		.slide__prev
+			float: left
+			margin-left: 0px
+			width: 60px
+			height: 60px
+			i
+				font-size: 9px
+		.slide__next
+			float: left
+			width: 60px
+			height: 60px
+			i
+				font-size: 9px
+	.description__heading
+		font-size: 26px!important
+		line-height: 29px!important
+		div
+			height: 30px!important
+	.description
+		top: 150px
+		left: 30px
+		z-index: 2
+	.slideshow
+		margin-bottom: 0px
+	.description__about-us
+		height: 20px!important
+		&:before
+			font-size: 18px!important
+			left: 5px!important
+		&:after
+			top: 1px!important
+			border-bottom: 2px solid #eb4c49!important
+		span	
+			font-size: 18px!important
+			line-height: 18px!important
+	//services
+	.services__heading
+		left: 30px
+		font-size: 26px
+		line-height: 31px
+		top: -50px
+		div
+			height: 31px
+	.services
+		padding-top: 100px
+	.item-wrapper
+		margin-left: 120px
+		flex-wrap: wrap
+		.services__item
+			flex-basis: 70%
+			position: relative
+			margin-bottom: 50px
+			svg
+				position: absolute
+				top: 0px
+				left: -90px
+				height: 60px
+			.item__heading
+				display: inline
+	.services__button
+		height: 20px
+		transform: translateX(-50%)
+		&:before
+			font-size: 18px
+			left: 5px
+		&:after
+			top: 1px
+			border-bottom: 2px solid #eb4c49
+		span	
+			font-size: 18px
+			line-height: 18px
+	//case study
+	.case-study
+		margin-top: 200px
+		margin-bottom: 80px
+	.case-study__side
+		transform: rotate(0deg)
+		top: 20px
+		left: 30px
+	.case-study__heading
+		display: inline-block
+		margin-left: 30px
+		margin-top: 50px
+		margin-bottom: 40px
+		div
+			height: 29px	
+			span
+				font-size: 26px
+				line-height: 29px
+	.case-study__nav
+		top: 50px
+		right: 30px
+		.button__next,.button__prev
+			width: 40px
+			height: 40px
+			&:nth-child(2)
+				margin-left: 5px
+	.carousel
+		margin-left: 30px
+	.case-study__button
+		float: none
+		margin-left: 30px
+		margin-right: initial
+		height: 20px
+		&:before
+			font-size: 18px
+			left: 5px
+		&:after
+			top: 1px
+			border-bottom: 2px solid #eb4c49
+		span	
+			font-size: 18px
+			line-height: 18px
+	//references
+	.references__side
+		transform: rotate(0deg)
+		top: 100px
+		left: 30px
+	.references__heading
+		margin-left: 30px!important
+		font-size: 36px!important
+		line-height: 43px!important
+		div
+			height: 43px!important
+	.references__left
+		a
+			left: 30px
+			height: 20px
+			&:before
+				font-size: 18px
+				left: 5px
+			&:after
+				top: 1px
+				border-bottom: 2px solid #eb4c49
+			span	
+				font-size: 18px
+				line-height: 18px
+	.references__brand
+		position: initial
+		margin-top: 150px
+		width: 100vw
+		img
+			width: 46vw
+			height: 32vw
+			flex-basis: 45%
+	.references
+		padding-bottom: 200px
+	//footer
+	.footer__side
+		transform: rotate(0deg)!important
+		top: 100px!important
+		left: 30px!important
+	.footer__heading
+	    font-size: 22px!important
+	    line-height: 26px!important
+	    margin-left: 30px!important
+	    div
+	    	height: 26px!important
+	.link.info-mail
+	  	font-size: 22px
+	  	line-height: 26px
+	  	margin-left: 30px
+	a.tel
+		font-size: 22px
+		line-height: 26px
+		margin-left: 30px!important
+	.footer__right
+		float: none!important
+		margin-top: 50px!important
+		margin-left: 30px
+		margin-right: initial
+		text-align: left!important
+		a,p
+			width: 250px
+	.footer__icon
+		left: 10px!important
+		top: 360px!important
+@media only screen and (max-width: 768px)
+	//header and popup
+	.menu__item
+		font-size: 38px
+		line-height: 49px
+	.popup__wrapper
+		padding-top: 170px
+		padding-left: 0px
+	.menu__wrap
+		left: 20px!important
+	.menu
+		li
+			&:nth-child(2)
+				.menu__wrap
+					top: 235px
+			&:nth-child(3)
+				.menu__wrap
+					top: 290px
+			&:nth-child(4)
+				.menu__wrap
+					top: 345px
+			&:nth-child(5)
+				.menu__wrap
+					top: 400px
+	.popup__right
+		float: none
+		margin-left: 20px!important
+		margin-top: 330px
+	.navigation__popup
+		overflow-y: scroll
+		overflow-x: hidden
+		height: 100vh !important
+		&.active
+			.popup__side
+				animation-name: popup__sideAnimationIn576!important
+		&.passive
+			.popup__side
+				animation-name: popup__sideAnimationOut576!important
+	body
+		&.active
+			.navigation__popup
+				position: initial
+	.blackScene
+		height: 100vh
+		.background
+			width: 80%
+	.popup__side
+		transform: rotate(0deg)!important
+		top: 150px
+		left: 20px
+	@keyframes popup__sideAnimationIn576
+		0%
+			transform: translateX(-100%)
+			opacity: 0
+		100%
+			transform: translateX(0%)
+			opacity: 1
+	@keyframes popup__sideAnimationOut576
+		0%
+			transform: translateX(0%)
+			opacity: 1
+		100%
+			transform: translateX(-100%)
+			opacity: 0
+	//banner
+	.banner__left
+		width: 80%
+		h1
+			font-size: 38px
+			line-height: 1
+		h5
+			transform: rotate(0deg) !important
+			top: 200px
+			left: 30px
+	.banner
+		padding-top: 235px
+		padding-left: 30px
+	.banner__right
+		float: none
+		margin-right: 0px
+		a
+			height: 20px
+			&:before
+				font-size: 18px
+				left: 5px
+			&:after
+				top: 1px
+				border-bottom: 2px solid #eb4c49
+			span	
+				font-size: 18px
+				line-height: 18px
+	//decor
+	.decor__wrap
+		top: 555px
+		left: 30px
+	//slide
+	.slide__item
+		height: 250px!important
+		img
+			top: -220px
+			width: 33%
+	.slide__button
+		top: 250px
+		width: 120px
+		right: 0px
+		.slide__prev
+			float: left
+			margin-left: 0px
+			width: 60px
+			height: 60px
+			i
+				font-size: 9px
+		.slide__next
+			float: left
+			width: 60px
+			height: 60px
+			i
+				font-size: 9px
+	.description__heading
+		font-size: 26px!important
+		line-height: 29px!important
+		div
+			height: 30px!important
+	.description
+		top: 150px
+		left: 30px
+		z-index: 2
+	.slideshow
+		margin-bottom: 0px
+	.description__about-us
+		height: 20px!important
+		&:before
+			font-size: 18px!important
+			left: 5px!important
+		&:after
+			top: 1px!important
+			border-bottom: 2px solid #eb4c49!important
+		span	
+			font-size: 18px!important
+			line-height: 18px!important
+	//services
+	.services__heading
+		left: 30px
+		font-size: 26px
+		line-height: 31px
+		top: -50px
+		div
+			height: 31px
+	.services
+		padding-top: 100px
+	.item-wrapper
+		margin-left: 120px
+		flex-wrap: wrap
+		.services__item
+			flex-basis: 70%
+			position: relative
+			margin-bottom: 50px
+			svg
+				position: absolute
+				top: 0px
+				left: -90px
+				height: 60px
+			.item__heading
+				display: inline
+	.services__button
+		height: 20px
+		transform: translateX(-50%)
+		&:before
+			font-size: 18px
+			left: 5px
+		&:after
+			top: 1px
+			border-bottom: 2px solid #eb4c49
+		span	
+			font-size: 18px
+			line-height: 18px
+	//case study
+	.case-study
+		margin-top: 200px
+		margin-bottom: 80px
+	.case-study__side
+		transform: rotate(0deg)
+		top: 20px
+		left: 30px
+	.case-study__heading
+		display: inline-block
+		margin-left: 30px
+		margin-top: 50px
+		margin-bottom: 40px
+		div
+			height: 29px	
+			span
+				font-size: 26px
+				line-height: 29px
+	.case-study__nav
+		top: 50px
+		right: 30px
+		.button__next,.button__prev
+			width: 40px
+			height: 40px
+			&:nth-child(2)
+				margin-left: 5px
+	.carousel
+		margin-left: 30px
+	.case-study__button
+		float: none
+		margin-left: 30px
+		margin-right: initial
+		height: 20px
+		&:before
+			font-size: 18px
+			left: 5px
+		&:after
+			top: 1px
+			border-bottom: 2px solid #eb4c49
+		span	
+			font-size: 18px
+			line-height: 18px
+	//references
+	.references__side
+		transform: rotate(0deg)
+		top: 100px
+		left: 30px
+	.references__heading
+		margin-left: 30px!important
+		font-size: 36px!important
+		line-height: 43px!important
+		div
+			height: 43px!important
+	.references__left
+		a
+			left: 30px
+			height: 20px
+			&:before
+				font-size: 18px
+				left: 5px
+			&:after
+				top: 1px
+				border-bottom: 2px solid #eb4c49
+			span	
+				font-size: 18px
+				line-height: 18px
+	.references__brand
+		position: initial
+		margin-top: 150px
+		width: 100vw
+		img
+			width: 46vw
+			height: 32vw
+			flex-basis: 45%
+	.references
+		padding-bottom: 200px
+	//footer
+	.footer__side
+		transform: rotate(0deg)!important
+		top: 100px!important
+		left: 30px!important
+	.footer__heading
+	    font-size: 22px!important
+	    line-height: 26px!important
+	    margin-left: 30px!important
+	    div
+	    	height: 26px!important
+	.link.info-mail
+	  	font-size: 22px
+	  	line-height: 26px
+	  	margin-left: 30px
+	a.tel
+		font-size: 22px
+		line-height: 26px
+		margin-left: 30px!important
+	.footer__right
+		float: none!important
+		margin-top: 50px!important
+		margin-left: 30px
+		margin-right: initial
+		text-align: left!important
+		a,p
+			width: 250px
+	.footer__icon
+		left: 10px!important
+		top: 360px!important
