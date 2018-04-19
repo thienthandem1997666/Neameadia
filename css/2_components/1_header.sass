@@ -1,0 +1,454 @@
+body
+	font-family: 'Open Sans', sans-serif
+	font-size: 16px
+	width: 100vw
+	min-width: 400px
+	max-width: 1366px
+	overflow-x: hidden!important
+	max-width: 1366px
+	&.active
+		width: 100vw
+		min-width: 400px
+		max-width: 1366px
+		height: 100vh
+		overflow: hidden
+		main
+			display: none
+		footer
+			display: none
+.body-wrapper
+	width: 100vw
+	height: 100%
+	min-width: 400px
+	max-width: 1366px
+	overflow-x: hidden!important
+header
+	position: absolute
+	z-index: 999
+	display: block
+	margin-top: 80px
+	height: 40px
+	width: 100vw
+	min-width: 400px
+	max-width: 1366px
+	transition: 0.25s
+	transition-delay: 0.25s
+	&.active
+		z-index: 999
+		position: fixed
+		color: white
+		transform: translateY(20px)
+		&.scroll
+			.wrapper
+				animation: headerSlideIn 0.25s both 0.25s
+	&.passive
+		&.scroll
+			position: fixed
+			.wrapper
+				animation: headerSlideOut 0.5s both
+	.wrapper
+		transition: 0.25s
+		transition-delay: 0.25s
+		margin: auto
+		width: 80%
+		min-width: 360px
+	&.scroll
+		position: fixed
+		z-index: 999
+		.wrapper
+			animation: headerScrollIn 0.25s both 0.25s
+	&.scrollBack
+		position: fixed
+		z-index: 999
+		.wrapper
+			width: 90%
+			animation: headerScrollOut 0.5s forwards
+.logo
+	display: inline-block
+.navigation
+	position: relative
+	float: right
+	font-size: 12px
+	font-weight: bold
+.navigation__menu
+	text-transform: uppercase
+	letter-spacing: 3px
+	display: inline-block
+	height: 40px
+	margin-top: 14px
+	margin-right: 20px
+	vertical-align: top
+	cursor: pointer
+.navigation__icon
+	cursor: pointer
+	position: absolute
+	width: 40px
+	height: 40px
+	background-color: #eb4c49
+	display: inline-block
+	border-radius: 50%
+	transition: 0.2s
+	&.active
+		span
+			transition: 0.2s
+			&:nth-child(1)
+				transform: rotate(45deg) scale(1.11)
+				transform-origin: left center
+			&:nth-child(2)
+				display: none
+			&:nth-child(3)
+				transform: rotate(-45deg) scale(1.11)
+				transform-origin: left center
+	&:hover
+		&.active
+			span
+				animation: none!important
+		transform: scale(1.2)
+		span
+			animation: hamburger-ani 0.4s forwards
+			animation-fill-mode: both
+			&:nth-child(2)
+				animation: hamburger-ani 0.4s forwards 0.03s
+				animation-fill-mode: both
+			&:last-child
+				animation: hamburger-ani 0.4s forwards 0.06s
+				animation-fill-mode: both
+	span
+		position: absolute
+		top: 16px
+		left: 15px
+		width: 10px
+		border-top: 2px solid #fff
+		display: block
+		&:first-child
+		&:nth-child(2)
+			top: 20px
+		&:last-child
+			top: 24px
+
+.lang
+	display: inline-block
+	height: 40px
+	width: 20px
+	margin-left: 80px
+	p
+		display: block
+		height: 20px
+		width: 20px
+		padding: 0px
+		cursor: pointer
+		&:before
+			width: 20px
+			border: 1px solid #000
+		&:first-child
+			margin-top: 4px
+		&.active
+			text-decoration: underline
+.navigation__popup
+	opacity: 0
+	visibility: hidden
+	color: white
+	position: fixed
+	top: 0px
+	left: 0px
+	width: 100vw
+	min-width: 400px
+	height: 100vh
+	z-index: 998
+	&.active
+		opacity: 1
+		visibility: visible
+		.blackScene
+			animation: popupAnimationIn 0.5s forwards cubic-bezier(.7,0,.3,1)
+			.background
+				animation: bgImageAnimationIn 1s both cubic-bezier(.7,0,.3,1)
+		.popup__wrapper
+			.popup__left
+				.popup__side
+					opacity: 0
+					animation: popup__sideAnimationIn 0.25s forwards cubic-bezier(.7,0,.3,1) 0.25s
+				.menu__wrap.menu__wrap--normal	
+					.menu__item
+						opacity: 1
+						animation-fill-mode: both
+						animation: textAnimationIn 0.5s cubic-bezier(.7,0,.3,1)
+						&.item1
+							animation-duration: 0.4s
+						&.item2
+							animation-duration: 0.3s
+						&.item3
+							animation-duration: 0.2s
+						&.item4
+							animation-duration: 0.1s
+			.popup__right
+				h5
+					animation: textAnimationRightIn 0.4s both cubic-bezier(.7,0,.3,1) 0.25s
+				a
+					animation: textAnimationRightIn 0.6s both cubic-bezier(.7,0,.3,1) 0.25s
+					&:nth-child(3)
+						animation-duration: 0.8s
+					&:nth-child(4)
+						animation-duration: 1s
+	&.passive
+		opacity: 1
+		visibility: visible
+		.blackScene
+			animation: popupAnimationOut 0.5s forwards cubic-bezier(.7,0,.3,1)
+			.background
+				animation: bgImageAnimationOut 0.5s forwards cubic-bezier(.7,0,.3,1)
+		.popup__wrapper
+			.popup__left
+				.popup__side
+					opacity: 1
+					animation: popup__sideAnimationOut 0.25s forwards cubic-bezier(.7,0,.3,1) 0.25s
+				.menu__wrap.menu__wrap--normal
+					.menu__item
+						opacity: 1
+						animation-fill-mode: both
+						animation: textAnimationOut 0.25s forwards cubic-bezier(.7,0,.3,1)
+			.popup__right
+				h5
+					animation: textAnimationRightOut 0.4s forwards cubic-bezier(.7,0,.3,1)
+				a
+					animation: textAnimationRightOut 0.35s forwards cubic-bezier(.7,0,.3,1)
+					&:nth-child(3)
+						animation-duration: 0.3s
+					&:nth-child(4)
+						animation-duration: 0.2s
+.blackScene			
+	position: absolute
+	width: 100%
+	height: 100%
+	background-color: black
+	z-index: 0
+	min-width: 400px
+	overflow: hidden
+	.background
+		width: 30%
+		height: auto
+		position: absolute
+.popup__wrapper
+	width: 80%
+	margin: auto
+	position: relative
+	padding-top: 230px
+	padding-left: 160px
+.popup__side
+	position: absolute
+	top: 250px
+	left: 70px
+	line-height: 1
+	text-transform: uppercase
+	font-size: 13px
+	font-weight: bold
+	transform: rotate(-90deg)
+	display: inline-block
+	letter-spacing: 2px
+	opacity: 0
+.menu
+	display: inline-block
+	li
+		overflow: hidden
+		display: inline-block
+		&:nth-child(2)
+			.menu__wrap
+				top: 315px
+		&:nth-child(3)
+			.menu__wrap
+				top: 385px
+		&:nth-child(4)
+			.menu__wrap
+				top: 455px
+		&:nth-child(5)
+			.menu__wrap
+				top: 525px
+		&:hover
+			.menu__wrap
+				&.menu__wrap--normal
+					transform: translateX(100%)
+					.menu__item
+						transform: translateX(-100%)
+				&.menu__wrap--red
+					transform: translateX(0px)
+					.menu__item
+						transform: translateX(0px)
+		.menu__wrap
+			display: inline-block
+			transition: 0.2s ease-in-out
+			overflow: hidden
+			position: absolute
+			left: 200px
+			top: 245px
+			&.menu__wrap--normal
+				color: white
+			&.menu__wrap--red
+				color: #eb4c49
+				transform: translateX(-100%)
+				.menu__item
+					transform: translateX(100%)
+			&.hidden
+				visibility: hidden
+.menu__item
+	font-size: 55px
+	font-weight: bold
+	line-height: 55px
+	cursor: pointer
+	display: block
+	transition: 0.2s ease-in-out
+.popup__left
+	width: 35%
+	display: inline-block
+.popup__right
+	width: 200px
+	margin-right: 200px
+	float: right
+	display: inline-block
+	h5
+		text-transform: uppercase
+		font-weight: bold
+		font-size: 13px
+		line-height: 1
+		letter-spacing: 2px
+		margin-bottom: 20px
+	a
+		text-decoration: none
+		color: white
+		display: inline-block
+		font-size: 20px
+		font-weight: 800
+		line-height: 1
+		margin-bottom: 20px
+		transition: 0.4s
+		span
+			display: inline
+			width: auto
+			&:after
+				content: ''
+				width: 100%
+				border-top: 2px solid #eb4c49
+				top: 0
+				left: 0
+				height: 1em
+				display: inline-block
+				transition: 0.4s cubic-bezier(.7,0,.3,1)
+				transform: scaleX(0)
+				transform-origin: left center
+		&:hover
+			color: #eb4c49
+			span
+				&:after
+					transform-origin: left center
+					transform: scaleX(1)
+		&:nth-child(2)
+			font-weight: 400
+			font-size: 13px
+			opacity: 0.8
+			line-height: 18px
+@keyframes hamburger-ani
+	0%
+		transform: translateX(0px)
+		opacity: 1
+	30%
+		transform: translateX(10px)
+		opacity: 0
+	60%
+		transform: translateX(-10px)
+		opacity: 0
+	100%
+		transform: translateX(0px)
+		opacity: 1
+@keyframes popupAnimationIn
+	0%
+		transform: translateY(100%)
+	100%
+		transform: translateY(0%)
+@keyframes popupAnimationOut
+	0%
+		transform: translateY(0%)
+	100%
+		transform: translateY(-100%)
+@keyframes popup__sideAnimationIn
+	0%
+		transform: translateY(-300%) rotate(-90deg)
+		opacity: 0
+	100%
+		transform: translateY(0%) rotate(-90deg)
+		opacity: 1
+@keyframes popup__sideAnimationOut
+	0%
+		transform: translateY(0%) rotate(-90deg)
+		opacity: 1
+	100%
+		transform: translateY(-300%) rotate(-90deg)
+		opacity: 0
+@keyframes textAnimationIn
+	0%
+		transform: translateY(-100%)
+		opacity: 1
+	100%
+		transform: translateY(0%)
+		opacity: 1
+@keyframes textAnimationOut
+	0%
+		transform: translateY(0%)
+	100%
+		transform: translateY(-100%)
+@keyframes bgImageAnimationIn
+	0%
+		margin-top: 150vh
+		margin-left: -50vw
+	100%
+		margin-top: 20vh
+		margin-left: 40vw
+@keyframes bgImageAnimationOut
+	0%
+		margin-top: 20vh
+		margin-left: 40vw
+	100%
+		margin-top: -100vh
+		margin-left: 100vw
+@keyframes textAnimationRightIn
+	0%
+		transform: translateX(-50%)
+		opacity: 0
+	100%
+		transform: translateX(0%)
+		opacity: 1
+@keyframes textAnimationRightOut
+	0%
+		transform: translateX(0%)
+		opacity: 1
+	100%
+		transform: translateX(-50%)
+		opacity: 0
+@keyframes headerScrollIn
+	0%
+		transform: translateY(-200px)
+		width: 80%
+	5%
+		transform: translateY(-200px)
+		width: 90%
+	100%
+		transform: translateY(-50px)
+		width: 90%
+@keyframes headerScrollOut
+	0%
+		transform: translateY(-50px)
+		width: 90%
+	100%
+		transform: translateY(-200px)
+		width: 90%
+@keyframes headerSlideIn
+	0%
+		transform: translateY(-50px)
+		width: 90%
+	100%
+		transform: translateY(20px)
+		width: 80%
+@keyframes headerSlideOut
+	0%
+		transform: translateY(20px)
+		width: 80%
+	100%
+		transform: translateY(-50px)
+		width: 90%

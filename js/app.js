@@ -118,7 +118,6 @@ document.addEventListener("DOMContentLoaded",function(){
 	var headerStatus = false;
 	//header scroll function
 	var addHeaderScrollAnimation = function(){
-		console.log(window.pageYOffset);
 		var scrollPosition = 300;
 		if(window.pageYOffset>scrollPosition && headerStatus === false){
 			header.classList.add('scroll');
